@@ -1,0 +1,36 @@
+{% extends "social_network/base.html" %}
+{% block content %}
+
+        <article class="media content-section">
+          <div class="media-body">
+                <!-- API #1 -->
+                <div class="article-metadata">
+                    <a class="mr-2">&lturl&gt/api/posts</a>
+                    <small class="text-muted">Posts</small>
+                </div>
+                <p class="article-content">You can use this url to retrieve information about all posts</p>
+
+                <!-- API #2 -->
+                <div class="article-metadata">
+                    <a class="mr-2">&lturl&gt/api/last_hour_posts</a>
+                    <small class="text-muted">Posts</small>
+                </div>
+                <p class="article-content">You can use this url to retrieve information about posts written in the last hour</p>
+
+                <!-- API #3 -->
+                <div class="article-metadata">
+                    <a class="mr-2">&lturl&gt/api/last_day_posts</a>
+                    <small class="text-muted">Posts</small>
+                </div>
+                <p class="article-content">You can use this url to retrieve information about posts written in the last 24 hours</p>
+
+                <!-- API #4 -->
+                <div class="article-metadata">
+                    <a class="mr-2">&lturl&gt/api/string_appearances/?string=&ltyour_string&gt</a>
+                    <small class="text-muted">Others</small>
+                </div>
+                <p class="article-content">You can use this url to retrieve all occurrences of the given string within posts</p>
+          </div>
+        </article>
+
+{% endblock content %}

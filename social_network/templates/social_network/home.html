@@ -1,0 +1,18 @@
+{% extends "social_network/base.html" %}
+{% block content %}
+
+    {% for post in posts %}
+        <article class="media content-section">
+          <div class="media-body">
+
+            <div class="article-metadata">
+              <a class="mr-2" href="/accounts/user/{{ post.user.pk }}/">{{ post.user }}</a>
+              <small class="text-muted">{{ post.datetime|date:"F d, Y" }}</small>
+            </div>
+
+            <p class="article-content">{{ post.content }}</p>
+          </div>
+        </article>
+    {% endfor %}
+
+{% endblock content %}
