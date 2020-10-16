@@ -7,10 +7,15 @@
 
             <div class="article-metadata">
               <a class="mr-2" href="/accounts/user/{{ post.user.pk }}/">{{ post.user }}</a>
-              <small class="text-muted">{{ post.datetime|date:"F d, Y" }}</small>
+              <small class="text-muted">{{ post.datetime|date:"F d, Y" }} </small>
             </div>
 
             <p class="article-content">{{ post.content }}</p>
+            <small class="text-muted">
+                <a class="mr-2" href="https://ropsten.etherscan.io/tx/{{ post.tx_id }}/">
+                    See your post on blockchain
+                </a>
+            </small>
           </div>
         </article>
     {% endfor %}
